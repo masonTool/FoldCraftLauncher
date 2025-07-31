@@ -24,10 +24,10 @@ android {
 
     signingConfigs {
         create("FCLKey") {
-            storeFile = file("../key-store.jks")
-            storePassword = pwd
-            keyAlias = "FCL-Key"
-            keyPassword = pwd
+            storeFile = file("../debug-key.jks")
+            storePassword = "FCL-Debug"
+            keyAlias = "FCL-Debug"
+            keyPassword = "FCL-Debug"
         }
         create("FCLDebugKey") {
             storeFile = file("../debug-key.jks")
@@ -78,7 +78,7 @@ android {
                         task.doLast {
                             val arch = System.getProperty("arch", "all")
                             val assetsDir = task.outputDir.get().asFile
-                            val jreList = listOf("jre8", "jre11", "jre17", "jre21")
+                            val jreList = listOf("jre8")
                             println("arch:$arch")
                             jreList.forEach { jre ->
                                 val runtimeDir = "$assetsDir/app_runtime/java/$jre"

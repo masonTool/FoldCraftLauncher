@@ -57,9 +57,9 @@ class SplashActivity : FCLActivity() {
     var cacio11: Boolean = false
     var cacio17: Boolean = false
     var java8: Boolean = false
-    var java11: Boolean = false
-    var java17: Boolean = false
-    var java21: Boolean = false
+    var java11: Boolean = true
+    var java17: Boolean = true
+    var java21: Boolean = true
     var jna: Boolean = false
     private lateinit var sharedPreferences: SharedPreferences
 

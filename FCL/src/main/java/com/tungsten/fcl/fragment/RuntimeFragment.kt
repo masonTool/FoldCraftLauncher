@@ -201,66 +201,66 @@ class RuntimeFragment : FCLFragment(), View.OnClickListener {
                     check()
                 }
             }
-            if (!java11) {
-                java11State.visibility = View.GONE
-                java11Progress.visibility = View.VISIBLE
-                lifecycleScope.launch {
-                    withContext(Dispatchers.IO) {
-                        runCatching {
-                            RuntimeUtils.installJava(
-                                context,
-                                FCLPath.JAVA_11_PATH,
-                                "app_runtime/java/jre11"
-                            )
-                            java11 = true
-                        }
-                    }
-                    java11State.visibility = View.VISIBLE
-                    java11Progress.visibility = View.GONE
-                    refreshDrawables()
-                    check()
-                }
-            }
-            if (!java17) {
-                java17State.visibility = View.GONE
-                java17Progress.visibility = View.VISIBLE
-                lifecycleScope.launch {
-                    withContext(Dispatchers.IO) {
-                        runCatching {
-                            RuntimeUtils.installJava(
-                                context,
-                                FCLPath.JAVA_17_PATH,
-                                "app_runtime/java/jre17"
-                            )
-                            java17 = true
-                        }
-                    }
-                    java17State.visibility = View.VISIBLE
-                    java17Progress.visibility = View.GONE
-                    refreshDrawables()
-                    check()
-                }
-            }
-            if (!java21) {
-                java21State.visibility = View.GONE
-                java21Progress.visibility = View.VISIBLE
-                lifecycleScope.launch {
-                    withContext(Dispatchers.IO) {
-                        runCatching {
-                            RuntimeUtils.installJava(
-                                context,
-                                FCLPath.JAVA_21_PATH,
-                                "app_runtime/java/jre21"
-                            )
-                            java21 = true
-                        }
-                    }
-                    java21State.visibility = View.VISIBLE
-                    java21Progress.visibility = View.GONE
-                    refreshDrawables()
-                    check()
-                }
-            }
+//            if (!java11) {
+//                java11State.visibility = View.GONE
+//                java11Progress.visibility = View.VISIBLE
+//                lifecycleScope.launch {
+//                    withContext(Dispatchers.IO) {
+//                        runCatching {
+//                            RuntimeUtils.installJava(
+//                                context,
+//                                FCLPath.JAVA_11_PATH,
+//                                "app_runtime/java/jre11"
+//                            )
+//                            java11 = true
+//                        }
+//                    }
+//                    java11State.visibility = View.VISIBLE
+//                    java11Progress.visibility = View.GONE
+//                    refreshDrawables()
+//                    check()
+//                }
+//            }
+//            if (!java17) {
+//                java17State.visibility = View.GONE
+//                java17Progress.visibility = View.VISIBLE
+//                lifecycleScope.launch {
+//                    withContext(Dispatchers.IO) {
+//                        runCatching {
+//                            RuntimeUtils.installJava(
+//                                context,
+//                                FCLPath.JAVA_17_PATH,
+//                                "app_runtime/java/jre17"
+//                            )
+//                            java17 = true
+//                        }
+//                    }
+//                    java17State.visibility = View.VISIBLE
+//                    java17Progress.visibility = View.GONE
+//                    refreshDrawables()
+//                    check()
+//                }
+//            }
+//            if (!java21) {
+//                java21State.visibility = View.GONE
+//                java21Progress.visibility = View.VISIBLE
+//                lifecycleScope.launch {
+//                    withContext(Dispatchers.IO) {
+//                        runCatching {
+//                            RuntimeUtils.installJava(
+//                                context,
+//                                FCLPath.JAVA_21_PATH,
+//                                "app_runtime/java/jre21"
+//                            )
+//                            java21 = true
+//                        }
+//                    }
+//                    java21State.visibility = View.VISIBLE
+//                    java21Progress.visibility = View.GONE
+//                    refreshDrawables()
+//                    check()
+//                }
+//            }
             if (!jna) {
                 jnaState.visibility = View.GONE
                 jnaProgress.visibility = View.VISIBLE
